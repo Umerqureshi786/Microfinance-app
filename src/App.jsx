@@ -13,7 +13,7 @@ const App = () => {
       "Wedding Loans": 500000,
       "Home Construction Loans": 1000000,
       "Business Startup Loans": 1000000,
-      "Education Loans": 400000, // Example value for "Based on requirement"
+      "Education Loans": 400000
     };
 
     const maxLoan = maxLoanMap[category] || 0;
@@ -40,7 +40,7 @@ const App = () => {
               { name: "Wedding Loans", max: "PKR 5 Lakh", period: "3 years" },
               { name: "Home Construction Loans", max: "PKR 10 Lakh", period: "5 years" },
               { name: "Business Startup Loans", max: "PKR 10 Lakh", period: "5 years" },
-              { name: "Education Loans", max: "Based on requirement", period: "4 years" },
+              { name: "Education Loans", max: "PKR 4 Lakh", period: "4 years" },
             ].map((category, index) => (
               <div key={index} className="category-card">
                 <h3 className="category-title">{category.name}</h3>
@@ -90,7 +90,7 @@ const App = () => {
             <div className="calculation-result">
               <h3>Calculation Result</h3>
               <p>Total Loan Amount: PKR {calculatedLoan.loanAmount.toLocaleString()}</p>
-              <p>Monthly Payment: PKR {calculatedLoan.monthlyPayment.toFixed(2)}</p>
+              <p>Monthly Payment: PKR {calculatedLoan.monthlyPayment.toFixed(1)}</p>
             </div>
           )}
         </section>
@@ -98,7 +98,7 @@ const App = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <p>&copy; 2025 Saylani Welfare. All rights reserved.</p>
+        <p>&copy; 2025 Saylani Welfare. All Rights Reserved.</p>
       </footer>
     </div>
   );
